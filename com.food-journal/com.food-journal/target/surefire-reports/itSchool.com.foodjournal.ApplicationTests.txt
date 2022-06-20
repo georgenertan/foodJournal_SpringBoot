@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: itSchool.com.foodjournal.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.351 s <<< FAILURE! - in itSchool.com.foodjournal.ApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+itSchool.com.foodjournal.user.UserController#getUser(int)
+to { [/users/{userId}]}: There is already 'userController' bean method
+itSchool.com.foodjournal.user.UserController#deleteUser(int) mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'userController' method 
+itSchool.com.foodjournal.user.UserController#getUser(int)
+to { [/users/{userId}]}: There is already 'userController' bean method
+itSchool.com.foodjournal.user.UserController#deleteUser(int) mapped.
+
